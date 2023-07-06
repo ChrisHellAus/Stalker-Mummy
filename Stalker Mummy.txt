@@ -1,0 +1,82 @@
+	-------ADD TO EVENTS.XML-------
+
+
+	<event name="StaticStalker">
+        <nominal>1</nominal>
+        <min>1</min>
+        <max>1</max>
+        <lifetime>3</lifetime>
+        <restock>1800</restock>
+        <saferadius>15</saferadius>
+        <distanceradius>1</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="1" init_random="0" remove_damaged="1"/>
+        <position>player</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="5" lootmin="1" max="1" min="1" type="ZmbM_Mummy"/>
+            <child lootmax="5" lootmin="1" max="1" min="1" type="ZmbF_DoctorSkinny"/>
+        </children>
+    </event>
+	
+	
+	
+	
+	
+	-------ADD TO CFGEVENTSPAWNS.XML-------
+	
+	
+	
+	<event name="StaticStalker">
+		<pos x="8888.35" z="8888.37" a="42.67" />
+	</event>
+	
+	
+	
+	
+	-------ADD TO TYPES.XML-------
+	
+	
+	
+	 <type name="ZmbM_Mummy">
+        <nominal>0</nominal>
+        <lifetime>1800</lifetime>
+        <restock>0</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+    </type>
+	
+	
+	
+	-------ADD TO CFGRANDOMPRESETS.XML-------
+	
+	
+	
+	<cargo chance="1.0" name="Stalker">
+		<item name="Bone" chance="0.1" />
+		<item name="HumanSteakMeat" chance="0.1" />
+		<item name="Rope" chance="0.1" />
+		<item name="Rag" chance="0.1" />
+		<item name="BandageDressing" chance="0.1" />
+		<item name="M67Grenade" chance="0.1" />
+		<item name="RGD5Grenade" chance="0.1" />
+		<item name="LandMineTrap" chance="0.1" />
+		<item name="Grenade_ChemGas" chance="0.1" />
+		<item name="NailBox" chance="0.1" />
+	</cargo>
+		
+		
+		
+		
+	-------ADD TO CFGSPAWNABLETYPES.XML-------
+	
+	
+	
+	
+	<type name="ZmbM_Mummy">
+		<cargo preset="Stalker" />		
+	</type>
